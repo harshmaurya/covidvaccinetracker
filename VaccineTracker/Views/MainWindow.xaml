@@ -1,0 +1,24 @@
+﻿<syncfusion:ChromelessWindow x:Class="VaccineTracker.MainWindow"
+                             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                             xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+
+                             Title="Vaccine Tracker by Harsh Maurya"
+                             MaxWidth="800"
+                             WindowStartupLocation="CenterScreen"
+                             Closing="MainWindow_OnClosing"
+                             syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialLight}">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" x:Name="Panel" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="100" Height="30" Content="Add New Tracker" Click="OnAddTrackerClick"/>
+                    <Button Margin="10,0,0,0" Width="100" Height="30" Content="More Info"
+                            x:Name="HelpButton" Click="HelpButton_OnClick"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <syncfusion:SfBusyIndicator x:Name="BusyIndicator" AnimationType="DoubleCircle"/>
+    </Grid>
+</syncfusion:ChromelessWindow>
